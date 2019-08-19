@@ -2,6 +2,7 @@
   "name": "doorflash",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://bryanenid.github.io/doorflash",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
@@ -15,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "webpack": "^4.29.6"
   }
 }
