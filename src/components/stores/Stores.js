@@ -18,7 +18,7 @@ export default class Stores extends Component {
     }
 
     componentDidMount = async () => {
-        const storesAPI = await fetch("http://192.168.0.23:7070/partnerships")
+        const storesAPI = await fetch("http://165.22.185.13:3000/partnerships")
         let json = [];
         if (storesAPI.status === 200) {
             json = await storesAPI.json()
@@ -30,14 +30,13 @@ export default class Stores extends Component {
                 this.fetchMenuFromSelectedStore(this.state.selectedMenu, true)
             })
         }
-
     }
 
     fetchMenuFromSelectedStore = async (storeName, componentDidMount = false, fetchMore = false) => {
         if (storeName !== this.state.selectedMenu || componentDidMount) {
             this.setState({ selectedMenu: storeName }, async () => {
                 let { selectedMenu, query } = this.state
-                const storesAPI = await fetch(`http://192.168.0.23:7070/partnerships/${selectedMenu}/menu/${query}`)
+                const storesAPI = await fetch(`http://165.22.185.13:3000/partnerships/${selectedMenu}/menu/${query}`)
                 let json = {
                     _id: "",
                     name: "",

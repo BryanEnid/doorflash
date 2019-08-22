@@ -70,7 +70,7 @@ export default class Menu extends Component {
         if (paginationEvent) page = paginationEvent
         try {
             const storeName = this.state.store
-            const menuAPI = await fetch(`http://192.168.0.23:7070/partnerships/${storeName}/menu?skip=${(page - 1) * 10}`)
+            const menuAPI = await fetch(`http://165.22.185.13:3000/partnerships/${storeName}/menu?skip=${(page - 1) * 10}`)
             const json = await menuAPI.json()
             const { success } = json
 
@@ -144,7 +144,7 @@ export default class Menu extends Component {
                                 } else {
                                     return (
                                         <div className="menuCards no_img" key={_id}>
-                                            <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.puella-magi.net%2Fthumb%2F2%2F27%2FNo_Image_Wide.svg%2F800px-No_Image_Wide.svg.png%3F20110202071158&f=1" />
+                                            <img alt="" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.puella-magi.net%2Fthumb%2F2%2F27%2FNo_Image_Wide.svg%2F800px-No_Image_Wide.svg.png%3F20110202071158&f=1" />
                                             <h2 className="title">{title}</h2>
                                             <p>{description}</p>
                                             <span className="price">{price}</span>
