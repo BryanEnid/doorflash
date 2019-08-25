@@ -70,7 +70,7 @@ export default class Menu extends Component {
         if (paginationEvent) page = paginationEvent
         try {
             const storeName = this.state.store
-            const menuAPI = await fetch(`http://165.22.185.13:3000/partnerships/${storeName}/menu?skip=${(page - 1) * 10}`)
+            const menuAPI = await fetch(`${this.props.HOSTNAME}/partnerships/${storeName}/menu?skip=${(page - 1) * 10}`)
             const json = await menuAPI.json()
             const { success } = json
 

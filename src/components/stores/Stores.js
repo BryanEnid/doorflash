@@ -18,7 +18,7 @@ export default class Stores extends Component {
     }
 
     componentDidMount = async () => {
-        const storesAPI = await fetch("http://165.22.185.13:3000/partnerships")
+        const storesAPI = await fetch(`${this.props.HOSTNAME}/partnerships`)
         let json = [];
         if (storesAPI.status === 200) {
             json = await storesAPI.json()
@@ -36,7 +36,7 @@ export default class Stores extends Component {
         if (storeName !== this.state.selectedMenu || componentDidMount) {
             this.setState({ selectedMenu: storeName }, async () => {
                 let { selectedMenu, query } = this.state
-                const storesAPI = await fetch(`http://165.22.185.13:3000/partnerships/${selectedMenu}/menu/${query}`)
+                const storesAPI = await fetch(`${this.props.HOSTNAME}/partnerships/${selectedMenu}/menu/${query}`)
                 let json = {
                     _id: "",
                     name: "",
