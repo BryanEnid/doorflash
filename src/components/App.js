@@ -11,7 +11,7 @@ export default class App extends Component {
       menu: [],
     }
     this.handleMenu = this.handleMenu.bind(this)
-    this.HOSTNAME = "https://api.bryanenid.com/v1"
+    this.HOSTNAME = "https://doorflash-api.azurewebsites.net/v1"
   }
 
   handleMenu = (menuListFromSelectedStore) => {
