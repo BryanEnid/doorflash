@@ -134,7 +134,7 @@ export default class Menu extends Component {
                                 const { title, description, price, banner_image, _id } = item
                                 if (banner_image) {
                                     return (
-                                        <div className="menuCards" key={_id}>
+                                        <div className="menuCards" key={this.state.store + _id} >
                                             <img src={banner_image} alt={banner_image} />
                                             <h2 className="title">{title}</h2>
                                             <p>{description}</p>
@@ -143,7 +143,7 @@ export default class Menu extends Component {
                                     )
                                 } else {
                                     return (
-                                        <div className="menuCards no_img" key={_id}>
+                                        <div className="menuCards no_img" key={this.state.store + _id}>
                                             <img alt="" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.puella-magi.net%2Fthumb%2F2%2F27%2FNo_Image_Wide.svg%2F800px-No_Image_Wide.svg.png%3F20110202071158&f=1" />
                                             <h2 className="title">{title}</h2>
                                             <p>{description}</p>
@@ -175,7 +175,7 @@ export default class Menu extends Component {
                     />
                     }
                 </div>
-            </div>
+            </div >
         )
     }
 }

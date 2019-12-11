@@ -66,16 +66,35 @@ export default class Stores extends Component {
         this.fetchMenuFromSelectedStore(e.currentTarget.dataset.storeName)
     }
 
+    Menu(props) {
+
+    }
+
     render() {
+
+        let menu = []
+        for (let i = 0; i < this.state.fetchedStoreData.length; i++) {
+            let { banner_image, title, _id, name } = this.state.fetchedStoreData[i];
+            if (banner_image != null) {
+                menu.push(
+                    <li key={_id} className="storesCard" onClick={this.handleNewFetch} data-store-name={name}>
+                        <img src={banner_image} alt={name + "_logo"} className="img" />
+                        {/* <p>{title}</p> */}
+                    </li>)
+            } else {
+                menu.push(<li key={_id} className="storesCard" onClick={this.handleNewFetch} data-store-name={name}>
+                    <p>{title}</p>
+                </li>)
+            }
+        }
+
+
         return (
             <div id="storesSection">
                 <ul>
-                    {this.state.fetchedStoreData.map(({ banner_image, title, _id, name }) => (
-                        <li key={_id} className="storesCard" onClick={this.handleNewFetch} data-store-name={name}>
-                            <img src={banner_image} alt={name + "_logo"} className="img" />
-                            <p>{title}</p>
-                        </li>
-                    ))}
+                    {
+                        menu.map((menu) => menu)
+                    }
                 </ul>
             </div>
         )
