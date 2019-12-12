@@ -119,13 +119,6 @@ export default class Menu extends Component {
                         <ul>
                             <div className="arrow">></div>
                             <li>Popular Items</li>
-                            <li>Value Menu</li>
-                            <li>Drinks</li>
-                            <li>Chicken</li>
-                            <li>Sanswiches</li>
-                            <li>Chicken</li>
-                            <li>Sanswiches</li>
-
                         </ul>
                     </div>
                     <div className="menuContainer">

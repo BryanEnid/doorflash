@@ -33,7 +33,9 @@
 }
 
 .storesCard img {
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    padding: -2px;
+    margin: -2px;
     border: 1px solid white;
 }
 

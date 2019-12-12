@@ -9,7 +9,7 @@ section {
     max-width: 100%;
     margin: 30px auto;
     gap: 60px;
-    padding: 30px;
+    padding: 10px;
 }
 
 .menuSections {
@@ -37,7 +37,7 @@ section {
 
 .menuContainer {
     display: grid;
-    gap: 30px;
+    gap: 40px 15px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-row: auto;  
 
@@ -48,23 +48,23 @@ section {
 .menuCards {
     background: white;
     display: grid;
-    padding: 20px;
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 4px;
+    padding: 8px;
+    /* border: 1px solid rgb(211, 211, 211); */
+    border-radius: 3px;
     justify-items: center;
 
-    box-shadow: 0px 0px 10px -5px;
+    box-shadow: 0px 0px 15px -5px #cacaca;
 }
 
 .no_img {
-    display: block;
+    display: grid;
     transition: display 1s ease-in-out;
 }
 
 
 .menuCards img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .menuCards h2.title {
@@ -169,7 +169,7 @@ section {
 
     .menuCards img {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     .menuCards h2.title {
@@ -266,8 +266,8 @@ section {
         background: white;
         display: grid;
         padding: 20px;
-        border: 1px solid rgb(211, 211, 211);
-        border-radius: 4px;
+        /* border: 1px solid rgb(211, 211, 211); */
+        border-radius: 3px;
         justify-items: center;
     
         box-shadow: 0px 0px 10px -5px;
@@ -275,7 +275,7 @@ section {
 
     .menuCards img {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 3px;
     }
     
     .menuCards h2.title {
